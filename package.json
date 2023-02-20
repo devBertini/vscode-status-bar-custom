@@ -1,10 +1,10 @@
 {
-  "name": "vscode-status-bar-custom",
-	"displayName": "Status Bar Customizer",
+  "name": "vscode-status-custom-bar",
+	"displayName": "Custom Status Bar",
 	"description": "Personalize your VS Code StatusBar with custom settings.",
   "icon": "img/icon.png",
   "version": "1.0.0",
-  "publisher": "devBertini",
+  "publisher": "DevBert1n1",
   "homepage": "https://github.com/devBertini/vscode-status-bar-custom",
 	"repository": {
 		"type": "git",
