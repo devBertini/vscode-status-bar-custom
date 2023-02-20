@@ -1,0 +1,76 @@
+{
+  "name": "vscode-status-bar-custom",
+	"displayName": "Status Bar Customizer",
+	"description": "Personalize your VS Code StatusBar with custom settings.",
+  "icon": "img/icon.png",
+  "version": "1.0.0",
+  "publisher": "devBertini",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+			"title": "Status Bar Custom Item",
+			"properties": {
+				"statusBarCustomItem.text": {
+					"type": "string",
+					"default": "Dev Bert1n1",
+					"description": "Custom Item Text (can be your name)"
+				},
+				"statusBarCustomItem.tooltip": {
+					"type": "string",
+					"default": "This Visual Studio Code belongs to Dev Bert1n1",
+					"description": "Custom Item Tooltip Text"
+				},
+				"statusBarCustomItem.icon": {
+					"type": "string",
+					"default": "🔥",
+					"description": "Custom Item Icon"
+				},
+				"statusBarCustomColor.primaryBkColor": {					
+					"type": "string",
+					"default": "#283AFF",
+					"description": "StatusBar background color" 
+				},
+				"statusBarCustomColor.secondaryBkColor": {
+					"type": "string",
+					"default": "#8a008f",
+					"description": "StatusBar No Folder and Debugging background color" 
+				},
+				"statusBarCustomColor.foregroundColor": {
+					"type": "string",
+					"default": "#ffffff",
+					"description": "Foreground (text) color" 
+				}		
+			}
+		}
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0",
+    "@types/glob": "^8.0.1",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "eslint": "^8.33.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.4",
+    "@vscode/test-electron": "^2.2.2"
+  }
+}
